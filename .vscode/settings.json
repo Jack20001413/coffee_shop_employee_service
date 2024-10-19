@@ -1,5 +1,12 @@
 {
     "python.analysis.extraPaths": [
         "/home/vscode/.local/bin/"
-    ]
+    ],
+    "python.analysis.inlayHints.variableTypes": true,
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "files.exclude": {
+        "**/.git": true,
+        "**/__pycache__": true,
+        "**/.pytest_cache": true
+    }
 }

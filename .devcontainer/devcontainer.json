@@ -24,7 +24,12 @@
                 "ms-python.flake8",
                 "ms-python.black-formatter",
                 "ms-azuretools.vscode-docker",
-                "ninoseki.vscode-mogami"
+                "ninoseki.vscode-mogami",
+                "yzhang.markdown-all-in-one",
+                "shd101wyy.markdown-preview-enhanced",
+                "bierner.markdown-mermaid",
+                "DavidAnson.vscode-markdownlint",
+                "humao.rest-client"
             ]
         }
     }
