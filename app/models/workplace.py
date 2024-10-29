@@ -2,8 +2,6 @@ from datetime import datetime
 from typing import List
 from sqlmodel import Field, Relationship, SQLModel
 
-# from app.models.employee import Employee
-
 
 class Workplace(SQLModel, table=True):
     id: int | None = Field(default=None, primary_key=True)

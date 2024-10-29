@@ -2,10 +2,6 @@ from datetime import date, datetime
 from typing import List
 from sqlmodel import Field, Relationship, SQLModel
 
-# from app.models.employee_position import EmployeePosition
-# from app.models.job_application_history import JobApplicationHistory
-# from app.models.leave import Leave
-# from app.models.payroll import Payroll
 from app.models.workplace import Workplace
 
 

@@ -2,8 +2,6 @@ from datetime import datetime
 from typing import List
 from sqlmodel import Field, Relationship, SQLModel
 
-# from app.models.payroll import Payroll
-
 
 class Salary(SQLModel, table=True):
     int: id | None = Field(default=None, primary_key=True)

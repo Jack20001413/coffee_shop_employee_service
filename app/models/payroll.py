@@ -4,7 +4,6 @@ from sqlmodel import Field, Relationship, SQLModel
 
 from app.models.employee import Employee
 from app.models.job import Job
-# from app.models.leave import Leave
 from app.models.salary import Salary
 
 

@@ -2,7 +2,6 @@ from datetime import datetime
 from typing import List
 from sqlmodel import Field, Relationship, SQLModel
 
-# from app.models.employee_position import EmployeePosition
 from app.models.job import Job
 
 
