@@ -1,15 +1,18 @@
 {
     "name": "Coffee shop employee service",
-    "build": {
-       "dockerfile": "Dockerfile",
-       "context": "..",
-       "args": {
-        "VARIANT": "3.12"
-       }
-    },
+    // "build": {
+    //    "dockerfile": "Dockerfile",
+    //    "context": "..",
+    //    "args": {
+    //     "VARIANT": "3.12"
+    //    }
+    // },
+    "dockerComposeFile": "docker-compose.yaml",
+    "service": "web",
+    "workspaceFolder": "/workspaces/coffee_shop_employee_service",
     "postCreateCommand": "bash .devcontainer/scripts/post-setup.sh",
     "features": {
-        "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+        "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
     },
     "customizations": {
         "vscode": {

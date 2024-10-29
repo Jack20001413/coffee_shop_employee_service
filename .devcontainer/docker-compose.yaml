@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+      args:
+        - VARIANT=3.12
+    command: sleep infinity
+    volumes:
+      - ..:/workspaces/coffee_shop_employee_service:wr
+  
+  db:
+    image: postgres:17-bookworm
+    restart: unless-stopped
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=J@ckStune286
+
+volumes:
+  postgres-data:

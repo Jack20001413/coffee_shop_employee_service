@@ -1,10 +1,10 @@
-from fastapi import FastAPI, APIRouter
-from .routes import employee
+from fastapi import FastAPI
+from .config.router import AppRouterConfig
+from .repository.schema import initialize_database
 
 
 app = FastAPI()
-api_router = APIRouter()
 
-api_router.include_router(employee.router, tags=["employees"])
+app.include_router(AppRouterConfig.inject_api_routers())
 
-app.include_router(api_router)
+initialize_database()

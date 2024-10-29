@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from app.entities.employee import Employee
+from app.models.employee import Employee
 
 router = APIRouter()
 
