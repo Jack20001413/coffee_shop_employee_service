@@ -1,8 +1,10 @@
 from datetime import date, datetime
+from typing import TYPE_CHECKING
 from sqlmodel import Field, Relationship, SQLModel
 
-from app.models.employee import Employee
-from app.models.job import Job
+if TYPE_CHECKING:
+    from app.models.employee import Employee
+    from app.models.job import Job
 
 
 class JobApplicationHistory(SQLModel, table=True):
@@ -12,9 +14,9 @@ class JobApplicationHistory(SQLModel, table=True):
     updated_at: datetime = Field(nullable=False)
 
     job_id: int = Field(foreign_key="job.id")
-    job: Job = Relationship(back_populates="job_application_histories")
+    job: "Job" = Relationship(back_populates="job_application_histories")
 
     employee_id: int = Field(foreign_key="employee.id")
-    employee: Employee = Relationship(
+    employee: "Employee" = Relationship(
         back_populates="job_application_histories"
     )

@@ -1,10 +1,13 @@
 from datetime import datetime
-from typing import List
+from typing import TYPE_CHECKING, List
 from sqlmodel import Field, Relationship, SQLModel
+
+if TYPE_CHECKING:
+    from .payroll import Payroll
 
 
 class Salary(SQLModel, table=True):
-    int: id | None = Field(default=None, primary_key=True)
+    id: int | None = Field(default=None, primary_key=True)
     amount: float
     bonus: float
     created_at: datetime = Field(nullable=False)

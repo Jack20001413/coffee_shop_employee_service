@@ -1,6 +1,9 @@
 from datetime import datetime
-from typing import List
+from typing import TYPE_CHECKING, List
 from sqlmodel import Field, Relationship, SQLModel
+
+if TYPE_CHECKING:
+    from .employee import Employee
 
 
 class Workplace(SQLModel, table=True):

@@ -1,8 +1,11 @@
 from datetime import datetime
-from typing import List
+from typing import TYPE_CHECKING
 from sqlmodel import Field, Relationship, SQLModel
 
-from app.models.job import Job
+
+if TYPE_CHECKING:
+    from .employee_position import EmployeePosition
+    from .job import Job
 
 
 class Position(SQLModel, table=True):
@@ -11,7 +14,9 @@ class Position(SQLModel, table=True):
     created_at: datetime = Field(nullable=False)
     updated_at: datetime = Field(nullable=False)
 
-    employee_positions: List["EmployeePosition"] = Relationship(
+    job_id: int = Field(foreign_key="job.id")
+    job: "Job" = Relationship(back_populates="position")
+
+    employee_positions: list["EmployeePosition"] = Relationship(
         back_populates="position"
     )
-    job: Job = Relationship(back_populates="position")
