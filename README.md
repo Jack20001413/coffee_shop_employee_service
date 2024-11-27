@@ -34,7 +34,7 @@ erDiagram
         string contact_address
         string phone_number
         int age
-        int storeId FK
+        int workplaceId FK
         date_time created_at
         date_time updated_at
     }
