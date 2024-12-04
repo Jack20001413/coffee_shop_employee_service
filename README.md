@@ -17,7 +17,7 @@ title: Employee Managment System
 erDiagram
     Employee ||--|{ EmployeePosition: is
     Position ||--|{ EmployeePosition: assigned
-    Store ||--|{ Employee: "works at"
+    Workplace ||--|{ Employee: "works at"
     Employee ||--|{ Leave: leaves
     Job ||--|| Position: describes
     Employee ||--|{ Payroll: receives
@@ -38,7 +38,7 @@ erDiagram
         date_time created_at
         date_time updated_at
     }
-    Store {
+    Workplace {
         int id
         string name
         string address
