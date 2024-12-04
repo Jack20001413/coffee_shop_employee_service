@@ -4,8 +4,8 @@ from fastapi import Response, status
 from sqlalchemy.exc import NoResultFound
 import pytest
 
-from app.main import app
-from app.services.workplace import WorkplaceService
+from src.main import app
+from src.services.workplace import WorkplaceService
 
 
 workplace_prefix = "/workplaces"
