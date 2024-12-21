@@ -32,7 +32,8 @@
                 "shd101wyy.markdown-preview-enhanced",
                 "bierner.markdown-mermaid",
                 "DavidAnson.vscode-markdownlint",
-                "humao.rest-client"
+                "humao.rest-client",
+                "dotenv.dotenv-vscode"
             ]
         }
     }
