@@ -23,14 +23,3 @@ PORT = os.getenv("DATABASE_PORT")
 connection_string: str = (
     f"postgresql+psycopg2://{USER}:%s@{HOST}:{PORT}/{DB_NAME}"
 ) % urllib.parse.quote_plus(PASSWORD).replace("%", "%%")
-
-engine: sqlalchemy.Engine = sqlmodel.create_engine(connection_string, echo=True)
-
-
-def initialize_databases() -> None:
-    sqlmodel.SQLModel.metadata.create_all(engine)
-
-
-def get_session() -> Generator[sqlmodel.Session, Any, None]:
-    with sqlmodel.Session(engine) as session:
-        yield session
