@@ -1,12 +1,5 @@
 {
     "name": "Coffee shop employee service",
-    // "build": {
-    //    "dockerfile": "Dockerfile",
-    //    "context": "..",
-    //    "args": {
-    //     "VARIANT": "3.12"
-    //    }
-    // },
     "dockerComposeFile": "docker-compose.yaml",
     "service": "web",
     "workspaceFolder": "/workspaces/coffee_shop_employee_service",
