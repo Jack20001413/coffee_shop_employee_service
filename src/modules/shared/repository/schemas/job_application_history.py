@@ -3,8 +3,8 @@ from typing import TYPE_CHECKING
 from sqlmodel import Field, Relationship, SQLModel
 
 if TYPE_CHECKING:
-    from src.models.employee import Employee
-    from src.models.job import Job
+    from .employee import Employee
+    from .job import Job
 
 
 class JobApplicationHistory(SQLModel, table=True):

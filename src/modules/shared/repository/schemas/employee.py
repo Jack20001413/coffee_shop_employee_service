@@ -4,10 +4,10 @@ from sqlmodel import Field, Relationship, SQLModel
 
 if TYPE_CHECKING:
     from .workplace import Workplace
-    from src.models.employee_position import EmployeePosition
-    from src.models.leave import Leave
-    from src.models.payroll import Payroll
-    from src.models.job_application_history import JobApplicationHistory
+    from .employee_position import EmployeePosition
+    from .leave import Leave
+    from .payroll import Payroll
+    from .job_application_history import JobApplicationHistory
 
 
 class Employee(SQLModel, table=True):

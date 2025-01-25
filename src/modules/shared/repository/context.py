@@ -1,6 +1,4 @@
 import dotenv
-import sqlalchemy
-import sqlmodel
 import os
 import urllib.parse
 

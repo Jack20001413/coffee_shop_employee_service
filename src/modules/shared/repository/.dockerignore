@@ -1,0 +1,13 @@
+# Ingnore Dotenv relating files
+**/.env.example
+**/.env
+
+# Docker
+docker-compose.yml
+**/Dockerfile
+**/.docker
+**/.dockerignore
+
+# Byte-compiled / optimized / DLL files
+**/__pycache__
+**/*.py[cod]
